@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bootstrap and menus</title>
+    </head>
+
+    <body>
+        <header></header>
+
+        <h1>Dynamic size of texts and images</h1>
+        <img src="star.png" alt="star" style="width: 50%; height: 50%;">
+        <p style="font-size:10vw">Example text</p>
+
+        <h1>Menus and header bar</h1>
+
+        <div id="menu" style="position:fixed; top:0; width:100%;">
+            <a href="#1" onclick="showContentSection('1')">Option 1</a>
+            <a href="#2" onclick="showContentSection('2')">Option 2</a>
+            <a href="#3" onclick="showContentSection('3')">Option 3</a>
+            <a href="#4" onclick="showContentSection('4')">Option 4</a>
+            <a href="#5" onclick="showContentSection('5')">Option 5</a>
+        </div>
+
+        <div id="content" style="margin-top:100px">
+            <p id="1" style="visibility:hidden;">Content 1</p>
+            <p id="2" style="visibility:hidden;">Content 2</p>
+            <p id="3" style="visibility:hidden;">Content 3</p>
+            <p id="4" style="visibility:hidden;">Content 4</p>
+            <p id="5" style="visibility:hidden;">Content 5</p>
+        </div>
+
+        <script>
+            function showContentSection(id) {
+                var listOfIds = ["1", "2", "3", "4", "5"];
+                for(i=0; i<listOfIds.length; i++) {
+                    if(listOfIds[i] == id) {
+                        document.getElementById(id).style.visibility="visible";
+                    }
+                    else {
+                    document.getElementById(id).style.visibility="hidden";
+                    } 
+                }
+            }
+        </script>
+
+        <footer></footer>
+    </body>
+</html>
